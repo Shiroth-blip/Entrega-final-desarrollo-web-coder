@@ -1,0 +1,614 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+
+       /*Navbar */
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color:#000000 !important;
+}
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: crimson;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+    /* Menu */
+  
+  #menu {
+    background-color: #C32358;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 200px);
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+      "about about projects projects"
+      "about about posts contact";
+  }
+  
+  #menu .tile {
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  #menu .tile a {
+    text-decoration: none;
+  }
+  #menu .tile .front {
+    color: white;
+    background-color: black;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #menu .tile:hover .front {
+    margin-top: -100%;
+  }
+  #menu .projects-tile:hover .front {
+    margin-top: -50%;
+  }
+  
+  #menu .tile .back {
+    background-color: #222;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  
+  #menu .logo-tile {
+    grid-area: logo;
+    background-color: red;
+  }
+  
+  #menu .about-tile {
+    grid-area: about;
+    background-color: red;
+  }
+  
+  #menu .about-tile .front {
+    background-image: url(../img/designecologist-r-Ej0NQmFlQ-unsplash\ \(1\).jpg);
+    background-size: cover;
+    background-position: top center;
+  }
+  
+  #menu .projects-tile {
+    grid-area: projects;
+    background-color: yellow;
+  }
+  
+  #menu .projects-tile .front {
+    background-image: url(../img/anna-kumpan-3J5K-Jb6GRM-unsplash.jpg);
+    background-size: cover;
+    background-position: top center;
+  }
+  
+  #menu .posts-tile {
+    grid-area: posts;
+    background-color: rgb(0, 255, 119);
+  }
+  #menu .posts-tile .front {
+    background-image: url(../img/jodene-isakowitz-hvqHtZqNMeI-unsplash.jpg);
+    background-size: cover;
+    background-position: top center;
+  }
+  #menu .contact-tile {
+    grid-area: contact;
+    background-color: rgb(255, 0, 208);
+  }
+  #menu .contact-tile .front {
+    background-image: url(../img/Google_Contacts_icon.svg.png);
+    background-size: cover;
+    background-position: top center;
+  }
+
+        /* Acerca de */
+
+#about {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 20px;
+          padding: 20px;
+}
+        
+#about .tile {
+          border-radius: 10px;
+          padding: 40px;
+          box-sizing: border-box;
+}
+        
+#about .tile-1 {
+          background-color: #eee;
+          grid-column: 1 / 2;
+}
+#about .tile-2 {
+          background-color: #eee;
+          grid-column: 2 / 3;
+          grid-row: 1 / 3;
+}
+#about .tile-2 img {
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          object-fit: cover;
+}
+        
+#about .tile-3 {
+          background-color: #eee;
+          grid-column: 3 / 4;
+          grid-row: 1 / 2;
+}
+        
+#about .tile-4 {
+          background-color: #eee;
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+}
+        
+#about .tile-5 {
+          background-color: #eee;
+          grid-column: 3 / 4;
+          grid-row: 2 / 3;
+}
+        
+#about .tile {
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          text-align: center;
+          font-size: 1.5em;
+}
+
+ /* Acerca de*/
+
+ .backgroundacerca{
+  background-color: #C32358;
+ }
+
+.container {
+	margin: auto;
+	max-width: 1300px;
+	overflow: auto;
+	padding: 0 20px;
+}
+
+#grid {
+	padding: 20px 0;
+}
+
+.grid-wrapper {
+	padding: 20px 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	gap: 20px;
+}
+
+.box {
+	background: #FFD6EC;
+	padding: 30px 20px;
+	border: 2px solid #000000;
+	border-radius: 5px;
+}
+
+.box img {
+	width: 100%;
+	height: 280px;
+	border-radius: 5px;
+}
+
+.box h4 {
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.box-1 {
+	grid-column: 1/3;
+	grid-row: 1;
+}
+
+.box-2 {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.box-3 {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.box-4 {
+	grid-column: 2/4;
+	grid-row: 2;
+}
+
+      /* Galería*/
+.galeriah2{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.backgroundgaleria{
+  background-color: #C32358;
+}
+      
+
+#inicio{
+  width: 50px;
+  height: 50px;
+  background: #000;
+}
+
+#inicio:target{
+  transform:translateX(500%);
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: auto;
+  width: 95%;
+  grid-gap:  10px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.galeria img{
+  width: 100%;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.galeria > a {
+  display:block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0 ,0.5);
+}
+
+.galeria a:hover img{
+  filter:blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.light-box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0 ,0.5);
+  transition: transform .3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: index 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+
+.light-box img{
+  width: 75vw;
+  max-height: 70vh;
+}
+
+.light-box:target{
+  transform: scale(1)
+}
+
+.close{
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #851919;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.next{
+  display: block;
+  background: #851919;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+  /*Posts*/
+
+.backgroundpost{
+  background-color: #C32358;
+}
+
+.instagram-card{
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.instagram-card-header{
+  padding: 20px;
+  height: 40px;
+}
+
+.instagram-card-user-image{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+
+.instagram-card-user-name{
+  margin-left:20px;
+  font-weight:bold;
+  color: #262626;
+}
+
+.instagram-card-content{
+  padding: 20px;
+}
+
+.likes{
+  font-weight: bold;
+}
+
+.instagram-card-content-user{
+  font-weight: bold;
+  color: #262626;
+}
+
+.hashtag{
+  color: #003569;
+}
+
+
+.instagram-card-footer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+hr{
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  margin-bottom: 0px;
+ 
+}
+
+
+.footer-action-icons{
+  font-size: 16px;
+  color: #ccc;
+}
+
+.comments-input{
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+}
+
+
+/* Formulario */
+
+#contact{
+  background-color: #C32358;
+  display: grid;
+  grid-template: auto 100px / 700px;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+#contact form input,
+#contact form textarea{
+  padding: 20px 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+
+/* Sección responsive */
+
+
+@media screen and (max-width:1090px){
+  #post{
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #menu {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "about projects"
+      "posts contact";
+  }
+
+  #menu .tile:hover .front {
+    margin-top: -50vh;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #about .tile-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  #about .tile-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #about .tile-3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #about .tile-4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #about .tile-5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  #contact {
+    padding: 0 20px;
+    grid-template: auto 100px / 100%;
+  }
+
+  #projects {
+    grid-template-areas:
+      "main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo"
+      "main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo"
+      "main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo main-photo"
+      "photo-2 photo-2 photo-2 photo-7 photo-7 photo-6 photo-6 photo-6 photo-9 photo-9"
+      "photo-2 photo-2 photo-2 photo-7 photo-7 photo-6 photo-6 photo-6 photo-9 photo-9"
+      "photo-3 photo-3 photo-5 photo-7 photo-7 photo-8 photo-8 photo-8 photo-8 photo-8"
+      "photo-3 photo-3 photo-5 photo-10 photo-10 photo-8 photo-8 photo-8 photo-8 photo-8"
+      "photo-17 photo-4 photo-4 photo-10 photo-10 photo-11 photo-11 photo-11 photo-12 photo-12"
+      "photo-17 photo-4 photo-4 photo-13 photo-14 photo-11 photo-11 photo-11 photo-12 photo-12"
+      "photo-17 photo-4 photo-4 photo-15 photo-16 photo-11 photo-11 photo-11 photo-12 photo-12";
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  #posts {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #menu {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "about"
+      "projects"
+      "posts"
+      "contact";
+  }
+
+  #menu .tile:hover .front {
+    margin-top: -25vh;
+  }
+
+  #menu .about-tile .front {
+    background-image: url(img/profile.png);
+    background-size: cover;
+    background-position: center -50px;
+  }
+
+  #about {
+    display: grid;
+    grid-template: auto / auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #about .tile-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  #about .tile-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  #about .tile-3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #about .tile-4 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  #about .tile-5 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+
+  #contact {
+    padding: 0 20px;
+  }
+
+  #posts {
+    grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+  }
+}
